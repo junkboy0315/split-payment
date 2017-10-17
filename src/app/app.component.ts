@@ -38,6 +38,10 @@ export class AppComponent {
   }
 
   addPerson() {
+    if(!this.totalPay) {
+      alert('Enter the toal payment amount first.');
+      return;
+    }
     this.people.push(new Person());
     this.recalc();
   }
