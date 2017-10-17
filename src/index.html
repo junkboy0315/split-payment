@@ -17,5 +17,13 @@
   <app-root></app-root>
 
   <noscript>You should enable Javascript.</noscript>
+
+  <script>
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('/service-worker.js', {scope: "/"})
+        .catch(console.error);
+    }
+  </script>
 </body>
 </html>
