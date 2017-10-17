@@ -30,10 +30,10 @@ export class AppComponent {
     // calculate payment for each person other than 'Fix'ed person
     const paymentPerPerson = (this.totalPay - totalOfFixed) / (this.people.length - countOfFixed);
     this.people
-    .filter(person => person.fixed === false)
-    .forEach((person) => {
-      person.payment = paymentPerPerson;
-    })
+      .filter(person => person.fixed === false)
+      .forEach((person) => {
+        person.payment = paymentPerPerson;
+      })
 
   }
 
