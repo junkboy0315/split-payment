@@ -6,25 +6,8 @@
   overflow-y: scroll;
  }
 
- .navbar-brand:hover {
-   color: #9d9d9d;
- }
-
  .panel-heading {
    font-size: 18px;
- }
-
- footer {
-   padding-bottom: 20px;
- }
-
- a,
- a:link,
- a:visited,
- a:hover,
- a:active {
-   text-decoration: none;
-   color: #000;
  }
 
  /* =====================================
@@ -61,14 +44,6 @@
 
  .total-payment {
    width: 100%;
-   margin: auto;
- }
-
- .github {
-   width: 3rem;
-   height: 3rem;
-   margin: 0 0.3rem;
-   vertical-align: -40%;
  }
 
  @media (max-width: 767px) {

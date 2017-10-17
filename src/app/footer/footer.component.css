@@ -1,0 +1,10 @@
+footer {
+  padding-bottom: 20px;
+}
+
+.github {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 0.3rem;
+  vertical-align: -40%;
+}
