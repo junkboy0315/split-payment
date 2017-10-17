@@ -44,6 +44,7 @@
 
  .total-payment {
    width: 100%;
+   margin: 20px auto;
  }
 
  @media (max-width: 767px) {
