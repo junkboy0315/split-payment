@@ -1,6 +1,8 @@
 {
   "short_name": "Split Pay",
   "name": "Split Payment Calculator",
+  "theme_color": "#333333",
+  "background_color": "#FFFFFF",
   "icons": [
     {
       "src": "/assets/icon.png",
