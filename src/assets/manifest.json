@@ -1,0 +1,11 @@
+{
+  "short_name": "Split Pay",
+  "name": "Split Payment Calculator",
+  "icons": [
+    {
+      "src": "/assets/icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
