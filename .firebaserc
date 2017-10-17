@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "staging": "split-payment-33bee",
+    "default": "split-payment-33bee"
+  }
+}
