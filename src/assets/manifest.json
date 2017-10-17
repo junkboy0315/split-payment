@@ -3,6 +3,8 @@
   "name": "Split Payment Calculator",
   "theme_color": "#333333",
   "background_color": "#FFFFFF",
+  "display": "standalone",
+  "start_url": "/",
   "icons": [
     {
       "src": "/assets/icon.png",
