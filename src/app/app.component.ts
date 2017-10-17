@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import Person from './shared/person.model';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -51,35 +53,30 @@ export class AppComponent {
   }
 
   increasePaymentOf(person: Person) {
-    person.payment -= person.payment % this.adjustmentUnit;
-    person.payment += this.adjustmentUnit;
+    const fraction = person.payment % this.adjustmentUnit;
+
+    person.adjustPayment(-fraction);
+    person.adjustPayment(this.adjustmentUnit);
     person.fixed = true;
 
     this.recalc();
   }
 
   decreasePaymentOf(person: Person) {
-    if(person.payment % this.adjustmentUnit != 0) {
-      person.payment -= person.payment % this.adjustmentUnit;
+    const fraction = person.payment % this.adjustmentUnit;
+
+    if(fraction === 0) {
+      person.adjustPayment(-this.adjustmentUnit);
     } else {
-      person.payment -= this.adjustmentUnit;
+      person.adjustPayment(-fraction);
     }
+
     person.fixed = true;
     this.recalc();
   }
 
   toggleFixedPayment(person: Person) {
-    person.fixed = !person.fixed;
+    person.toggleFixed();
     this.recalc();
-  }
-}
-
-class Person {
-  payment: number;
-  fixed: boolean;
-
-  constructor() {
-    this.payment = 0;
-    this.fixed = false;
   }
 }
