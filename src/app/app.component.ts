@@ -14,13 +14,8 @@ export class AppComponent {
 
   recalc() {
     // 端数処理の単位を設定　5桁なら500円、4桁なら50円、3桁なら5円
-    let num = this.totalPay;
-    let keta = 0;
-    while(num >= 1) {
-      num /= 10;
-      keta += 1;
-    };
-    this.adjustmentUnit = 10 ** (keta - 3) * 5
+    const digit = Number(this.totalPay.toString().length)
+    this.adjustmentUnit = 5 * (10 ** (digit - 3))
 
     // calculate the sum of payments marked 'Fix'
     const countOfFixed = this.people
