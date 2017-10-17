@@ -43,9 +43,13 @@
  }
 
  .total-payment {
-   width: 100%;
+   width: 25rem;
    margin: 20px auto;
  }
+
+ .total-payment > input {
+  text-align: center;
+}
 
  @media (max-width: 767px) {
    .person-edit-buttons {
