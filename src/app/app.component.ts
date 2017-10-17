@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  totalPay: number = 0;
+  totalPay: number;
   people: Person[] = [];
   adjustmentUnit: number;
 
