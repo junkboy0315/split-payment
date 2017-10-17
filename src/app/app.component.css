@@ -74,7 +74,8 @@
  .github {
    width: 3rem;
    height: 3rem;
-   vertical-align: -47%;
+   margin: 0 0.3rem;
+   vertical-align: -40%;
  }
 
  @media (max-width: 767px) {
