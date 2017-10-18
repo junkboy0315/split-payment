@@ -1,4 +1,4 @@
-export default class Person {
+export class Person {
   constructor(
     public payment: number = 0,
     public fixed:boolean = false,

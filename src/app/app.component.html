@@ -9,7 +9,7 @@
             <div class="input-group total-payment">
               <span class="input-group-addon">$</span>
               <input
-                [(ngModel)]="totalPay"
+                [(ngModel)]="personListService.totalPay"
                 (ngModelChange)="recalc()"
                 type="number"
                 placeholder="Enter the total Payment"
@@ -20,13 +20,13 @@
 
             <div>
               <!-- Person Badge -->
-              <span *ngIf="people.length !== 0">Person:<span class="badge">{{people.length}}</span></span>
+              <span *ngIf="personListService.personList.length !== 0">Person:<span class="badge">{{personListService.personList.length}}</span></span>
               <!-- Add Person Button-->
               <button (click)="addPerson()" class="btn btn-default btn-primary add-person">Add Person</button>
             </div>
 
             <ul class="people-list">
-              <li *ngFor="let person of people; let i = index" class="list-group-item">
+              <li *ngFor="let person of personListService.personList; let i = index" class="list-group-item">
                 <div class="row">
 
                   <!-- 左半分-->
@@ -43,7 +43,7 @@
                     <div role="group" class="btn-group pull-right">
                       <button type="button" tabindex="-1" (click)="increasePaymentOf(person)" class="btn btn-default">＋</button>
                       <button type="button" tabindex="-1" (click)="decreasePaymentOf(person)" class="btn btn-default">－</button>
-                      <button type="button" tabindex="-1" (click)="toggleFixedPayment(person)" [ngClass]="{'btn-danger': person.fixed}" class="btn btn-default">Fix</button>
+                      <button type="button" tabindex="-1" (click)="toggleFixedPaymentOf(person)" [ngClass]="{'btn-danger': person.fixed}" class="btn btn-default">Fix</button>
                       <button type="button" tabindex="-1" (click)="deletePerson(i)" class="btn btn-default"><span class="glyphicon glyphicon-remove"></span></button>
                     </div>
                   </div>
