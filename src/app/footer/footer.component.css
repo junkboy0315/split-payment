@@ -8,3 +8,8 @@ footer {
   margin: 0 0.3rem;
   vertical-align: -40%;
 }
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
