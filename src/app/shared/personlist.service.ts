@@ -68,7 +68,7 @@ export class PersonListService {
     this.personList
       .filter(person => person.fixed === false)
       .forEach((person) => {
-        person.payment = paymentPerPerson;
+        person.payment = Math.floor(paymentPerPerson);
       })
 
   }
