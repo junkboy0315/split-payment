@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 
 import { PersonListService } from './shared/personlist.service';
 import { MainComponent } from './main/main.component';
+import { PersonComponent } from './main/person/person.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { MainComponent } from './main/main.component';
     FooterComponent,
     HeaderComponent,
     MainComponent,
+    PersonComponent,
   ],
   imports: [
     BrowserModule,

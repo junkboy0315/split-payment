@@ -10,21 +10,6 @@
   padding: 0;
 }
 
-.people-list li {
-  min-height: 60px;
-  background: #f4f4f4;
-}
-
-.people-list .person-icon {
-  float: left;
-  margin-right: 5px;
-  margin-top: 3px;
-}
-
-.people-list .person-icon img {
-  width: 30px;
-}
-
 .total-payment {
   width: 25rem;
   margin: 20px auto;

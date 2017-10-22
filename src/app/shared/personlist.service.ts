@@ -15,8 +15,8 @@ export class PersonListService {
     this.recalc();
   }
 
-  deletePerson(i) {
-    this.personList.splice(i, 1);
+  deletePerson(person: Person) {
+    this.personList.splice(this.personList.indexOf(person), 1);
     this.recalc();
   }
 

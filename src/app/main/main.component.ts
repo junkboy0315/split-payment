@@ -20,21 +20,4 @@ export class MainComponent {
   addPerson() {
     this.personListService.addPerson();
   }
-
-  deletePerson(index: number) {
-    this.personListService.deletePerson(index);
-  }
-
-  increasePaymentOf(person: Person) {
-    this.personListService.increasePaymentOf(person);
-  }
-
-  decreasePaymentOf(person: Person) {
-    this.personListService.decreasePaymentOf(person);
-  }
-
-  toggleFixedPaymentOf(person: Person) {
-    this.personListService.toggleFixedPaymentOf(person);
-  }
-
 }

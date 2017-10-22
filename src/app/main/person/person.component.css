@@ -1,0 +1,14 @@
+li {
+  min-height: 60px;
+  background: #f4f4f4;
+}
+
+.person-icon {
+  float: left;
+  margin-right: 5px;
+  margin-top: 3px;
+}
+
+.person-icon img {
+  width: 30px;
+}
