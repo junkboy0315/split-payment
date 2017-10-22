@@ -9,6 +9,7 @@
           type="number"
           [(ngModel)]="person.payment"
           (ngModelChange)="onEditPaymentOf(person)"
+          (click)="$event.target.select()"
           placeholder="Payment"
           class="form-control">
       </div>

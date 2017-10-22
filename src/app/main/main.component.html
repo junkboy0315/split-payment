@@ -4,6 +4,7 @@
   <input
     [(ngModel)]="personListService.totalPay"
     (ngModelChange)="recalc()"
+    (click)="$event.target.select()"
     type="number"
     placeholder="Enter the total Payment"
     class="form-control"
