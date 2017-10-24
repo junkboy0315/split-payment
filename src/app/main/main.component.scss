@@ -1,0 +1,39 @@
+/* Total Payment */
+.container-of-total-payment {
+  margin: 2rem 0 0rem;
+
+  .input-group {
+    margin-right: 2rem;
+    width: 10rem;
+  }
+
+  .dollar{
+    width: 20px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  input {
+    text-align: center;
+  }
+}
+
+/* Person Badge */
+.container-of-person-badge {
+  margin: 1.7rem 0 1.5rem;
+
+  .badge {
+    vertical-align: 15%;
+  }
+}
+
+/* Person List */
+.container-of-person-list {
+  ul li {
+    background: #f4f4f4;
+  }
+
+  .list-group-item {
+    padding: 20px 15px;
+  }
+}

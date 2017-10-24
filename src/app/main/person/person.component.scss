@@ -1,15 +1,13 @@
 .container-of-person-badge {
   width: 2rem;
   margin-right: 10px;
-}
 
-.container-of-person-badge .badge {
-  margin-top: 4px;
-}
+  .badge {
+    margin-top: 4px;
+  }
 
-@media screen and (max-width: 380px) {
-  .container-of-person-badge {
-    display:none;
+  @media screen and (max-width: 380px) {
+      display:none;
   }
 }
 
