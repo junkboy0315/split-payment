@@ -22,29 +22,18 @@ input {
 }
 
 .dollar{
-  width: 20px;
+  width: 40px;
   padding: 0;
   justify-content: center;
 }
 
 .btn-1 {
-  width: 40px;
+  width: 50px;
   justify-content: center;
 }
 
 .btn-2 {
-  width: 40px;
+  width: 50px;
   justify-content: center;
 }
 
-.btn-3 {
-  width: 40px;
-  padding: 0;
-  justify-content: center;
-}
-
-.btn-4 {
-  width: 40px;
-  justify-content: center;
-  padding-bottom: 10px;
-}
