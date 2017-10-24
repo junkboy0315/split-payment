@@ -6,11 +6,6 @@ export class PersonListService {
   public totalPay: number;
 
   addPerson() {
-    if(!this.totalPay){
-      alert('Enter the total payment first.');
-      return;
-    }
-
     this.personList.push(new Person);
     this.recalc();
   }
@@ -49,6 +44,10 @@ export class PersonListService {
   }
 
   recalc() {
+    if(!this.totalPay) {
+      return;
+    }
+
     // 端数処理の単位を設定　5桁なら500円、4桁なら50円、3桁なら5円
     const digit = Number(this.totalPay.toString().length)
     this.adjustmentUnit = 5 * (10 ** (digit - 3))
