@@ -15,25 +15,29 @@
   <button (click)="addPerson()" class="btn btn-default btn-primary">Add Person</button>
 </div>
 
-<!-- Person Badge -->
-<div
-  class="d-flex justify-content-center container-of-person-badge"
-  *ngIf="personListService.personList.length !== 0"
->
-  <div>
-    <span class="badge badge-pill badge-primary">{{personListService.personList.length}}</span>
-    Persons
-  </div>
-</div>
+<div [@onPersonListChange]="personListService.personList.length">
 
-<!-- Person List -->
-<div
-  class="d-flex justify-content-center container-of-person-list"
-  *ngIf="personListService.personList.length !== 0"
->
-  <ul class="list-group">
-    <li class="list-group-item" *ngFor="let person of personListService.personList; let i = index">
-      <app-person [person]="person" [index]="i+1"></app-person>
-    </li>
-  </ul>
+  <!-- Person Badge -->
+  <div
+    class="d-flex justify-content-center container-of-person-badge"
+    *ngIf="personListService.personList.length !== 0"
+  >
+    <div>
+      <span id="total-person-count" class="badge badge-pill badge-primary">{{personListService.personList.length}}</span>
+      Persons
+    </div>
+  </div>
+
+  <!-- Person List -->
+  <div
+    class="d-flex justify-content-center container-of-person-list"
+    *ngIf="personListService.personList.length !== 0"
+  >
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let person of personListService.personList; let i = index">
+        <app-person [person]="person" [index]="i+1"></app-person>
+      </li>
+    </ul>
+  </div>
+
 </div>
