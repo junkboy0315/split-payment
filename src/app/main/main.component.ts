@@ -11,10 +11,7 @@ import { PersonListService } from '../shared/personlist.service';
 export class MainComponent {
   constructor(
     public personListService: PersonListService,
-  ){
-    this.personListService.totalPay = 10000;
-    this.personListService.addPerson();
-  }
+  ){}
 
   recalc() {
     this.personListService.recalc();
