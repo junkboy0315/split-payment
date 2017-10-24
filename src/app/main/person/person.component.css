@@ -1,14 +1,50 @@
-li {
-  min-height: 60px;
-  background: #f4f4f4;
+.container-of-person-badge {
+  width: 2rem;
+  margin-right: 10px;
 }
 
-.person-icon {
-  float: left;
-  margin-right: 5px;
-  margin-top: 3px;
+.container-of-person-badge .badge {
+  margin-top: 4px;
 }
 
-.person-icon img {
-  width: 30px;
+@media screen and (max-width: 380px) {
+  .container-of-person-badge {
+    display:none;
+  }
+}
+
+input {
+  text-align: center;
+}
+
+.input-group {
+  width: 17rem;
+}
+
+.dollar{
+  width: 20px;
+  padding: 0;
+  justify-content: center;
+}
+
+.btn-1 {
+  width: 40px;
+  justify-content: center;
+}
+
+.btn-2 {
+  width: 40px;
+  justify-content: center;
+}
+
+.btn-3 {
+  width: 40px;
+  padding: 0;
+  justify-content: center;
+}
+
+.btn-4 {
+  width: 40px;
+  justify-content: center;
+  padding-bottom: 10px;
 }

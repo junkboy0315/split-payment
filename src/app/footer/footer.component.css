@@ -3,13 +3,17 @@ footer {
 }
 
 .github {
-  width: 3rem;
-  height: 3rem;
+  width: 30px;
+  height: 30px;
   margin: 0 0.3rem;
-  vertical-align: -40%;
+  vertical-align: -33%;
 }
 
 a:hover, a:visited, a:link, a:active
 {
     text-decoration: none;
+}
+
+hr {
+  margin-top: 2rem;
 }

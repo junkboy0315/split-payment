@@ -1,27 +1,37 @@
-.add-person {
-  width: 150px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  margin-left: 20px;
+/* Total Payment */
+.container-of-total-payment {
+  margin: 2rem 0 0rem;
 }
 
-.people-list {
-  margin: 0 0 0 0;
+.container-of-total-payment .input-group {
+  margin-right: 1rem;
+  width: 8rem;
+}
+
+.container-of-total-payment .dollar{
+  width: 20px;
   padding: 0;
+  justify-content: center;
 }
 
-.total-payment {
-  width: 25rem;
-  margin: 20px auto;
+.container-of-total-payment input {
+  text-align: center;
 }
 
-.total-payment > input {
- text-align: center;
+/* Person Badge */
+.container-of-person-badge {
+  margin: 1.7rem 0 1.5rem;
 }
 
-@media (max-width: 767px) {
-  .person-edit-buttons {
-    padding-top: 10px;
-    margin: auto;
-  }
+.container-of-person-badge .badge {
+  vertical-align: 15%;
+}
+
+/* Person List */
+.container-of-person-list ul li {
+  background: #f4f4f4;
+}
+
+.container-of-person-list .list-group-item {
+  padding: 20px 15px;
 }
