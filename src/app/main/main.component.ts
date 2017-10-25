@@ -37,8 +37,8 @@ import { PersonListService } from '../shared/personlist.service';
 
           query(':leave',
             animate('0.25s ease-out', keyframes([
-              style({opacity: 1.0, transform:'scaleY(1)', height: '100%', offset: 0}),
-              style({opacity: 0.0, transform:'scaleY(0)', height: 0, padding: 0, offset: 1}),
+              style({opacity: 1.0, transform:'scaleY(1)', height: '100%', paddingTop: '20px', paddingBottom: '20px', offset: 0}),
+              style({opacity: 0.0, transform:'scaleY(0)', height: 0, paddingTop: '0px', paddingBottom: '0px', offset: 1}),
             ]))
           , {optional: true}),
 
