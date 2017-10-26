@@ -2,8 +2,26 @@ import { Person } from './person.model';
 
 export class PersonListService {
   public personList: Person[] = [];
-  public adjustmentUnit: number;
-  public totalPay: number;
+  private adjustmentUnit: number;
+  private _totalPay: number;
+
+  get totalPay() {
+    return this._totalPay;
+  }
+
+  set totalPay(val) {
+    this._totalPay = val;
+
+    // Determine the unit of adjustment when increasing or decreasing payment.
+    // If totalPay is 3 digits, unit should be 5
+    // If totalPay is 4 digits, unit should be 50
+    // If totalPay is 5 digits, unit should be 500  and so on
+    const digit = Number(this.totalPay.toString().length)
+    this.adjustmentUnit = 5 * (10 ** (digit - 3))
+
+    // recalc
+    this.recalc();
+  }
 
   addPerson() {
     this.personList.push(new Person);
@@ -47,10 +65,6 @@ export class PersonListService {
     if(!this.totalPay) {
       return;
     }
-
-    // 端数処理の単位を設定　5桁なら500円、4桁なら50円、3桁なら5円
-    const digit = Number(this.totalPay.toString().length)
-    this.adjustmentUnit = 5 * (10 ** (digit - 3))
 
     // calculate the sum of payments marked 'Fix'
     const countOfFixed = this.personList

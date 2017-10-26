@@ -9,7 +9,6 @@
       type="number"
       (click)="$event.target.select()"
       [(ngModel)]="personListService.totalPay"
-      (ngModelChange)="recalc()"
     >
   </div>
   <button (click)="addPerson()" class="btn btn-default btn-primary">Add Person</button>

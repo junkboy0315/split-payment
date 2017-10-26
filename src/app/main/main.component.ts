@@ -60,10 +60,6 @@ export class MainComponent {
     public personListService: PersonListService,
   ){}
 
-  recalc() {
-    this.personListService.recalc();
-  }
-
   addPerson() {
     this.personListService.addPerson();
   }
