@@ -1,4 +1,4 @@
-# Split Payment Calculator
+# Split Payment Calculator [![Build Status](https://semaphoreci.com/api/v1/junkboy0315/split-payment/branches/master/badge.svg)](https://semaphoreci.com/junkboy0315/split-payment)
 
 This is the source code of [Split Payment Calculator](http://split.tamura.io).
 
