@@ -1,6 +1,6 @@
 {
-  "short_name": "Split Pay",
-  "name": "Split Payment Calculator",
+  "short_name": "SplitBills",
+  "name": "SplitBills",
   "theme_color": "#333333",
   "background_color": "#FFFFFF",
   "display": "standalone",
