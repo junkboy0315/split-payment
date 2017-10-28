@@ -1,14 +1,29 @@
 import { AppPage } from './app.po';
 
-describe('warikan App', () => {
+describe('SplitBills App', () => {
   let page: AppPage;
 
   beforeEach(() => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display start page', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    page.canDisplayStartPage();
+  });
+
+  it('should add person', () => {
+    page.navigateTo();
+    page.canAddPerson();
+  });
+
+  it('should calculate correctly', () => {
+    page.navigateTo();
+    page.canCalculateCorrectly();
+  });
+
+  it('should fix correctly', () => {
+    page.navigateTo();
+    page.canFixCorrectly();
   });
 });
