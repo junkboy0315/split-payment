@@ -4,7 +4,7 @@ export class Person {
     public fixed:boolean = false,
   ) {}
 
-  adjustPayment(amount: number) {
+  adjustPaymentBy(amount: number) {
     this.payment += amount;
   }
 

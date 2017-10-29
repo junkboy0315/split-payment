@@ -36,8 +36,8 @@ export class PersonListService {
   increasePaymentOf(person: Person) {
     const fraction = person.payment % this.adjustmentUnit;
 
-    person.adjustPayment(-fraction);
-    person.adjustPayment(this.adjustmentUnit);
+    person.adjustPaymentBy(-fraction);
+    person.adjustPaymentBy(this.adjustmentUnit);
     person.fixed = true;
 
     this.recalc();
@@ -47,9 +47,9 @@ export class PersonListService {
     const fraction = person.payment % this.adjustmentUnit;
 
     if(fraction === 0) {
-      person.adjustPayment(-this.adjustmentUnit);
+      person.adjustPaymentBy(-this.adjustmentUnit);
     } else {
-      person.adjustPayment(-fraction);
+      person.adjustPaymentBy(-fraction);
     }
 
     person.fixed = true;
