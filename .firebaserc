@@ -1,6 +1,6 @@
 {
   "projects": {
-    "staging": "split-payment-33bee",
-    "default": "split-payment-33bee"
+    "staging": "splitbills-7fe96",
+    "default": "splitbills-7fe96"
   }
 }
