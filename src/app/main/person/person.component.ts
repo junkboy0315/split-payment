@@ -12,9 +12,7 @@ export class PersonComponent {
   @Input() person: Person;
   @Input() index: number;
 
-  constructor(
-    public personListService: PersonListService,
-  ) { }
+  constructor(public personListService: PersonListService) {}
 
   onEditPaymentOf(person: Person) {
     person.fixed = true;

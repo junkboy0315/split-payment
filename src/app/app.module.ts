@@ -15,7 +15,7 @@ import { PersonComponent } from './main/person/person.component';
 const appRoutes: Routes = [
   { path: '', component: MainComponent },
   // redirect all other path to the root('') path
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
@@ -32,9 +32,7 @@ const appRoutes: Routes = [
     FormsModule,
     RouterModule.forRoot(appRoutes),
   ],
-  providers: [
-    PersonListService,
-  ],
-  bootstrap: [AppComponent]
+  providers: [PersonListService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -16,15 +16,15 @@ export class PersonListService {
     // If totalPay is 3 digits, unit should be 5
     // If totalPay is 4 digits, unit should be 50
     // If totalPay is 5 digits, unit should be 500  and so on
-    const digit = Number(this.totalPay.toString().length)
-    this.adjustmentUnit = 5 * (10 ** (digit - 3))
+    const digit = Number(this.totalPay.toString().length);
+    this.adjustmentUnit = 5 * 10 ** (digit - 3);
 
     // recalc
     this.recalc();
   }
 
   addPerson() {
-    this.personList.push(new Person);
+    this.personList.push(new Person());
     this.recalc();
   }
 
@@ -46,7 +46,7 @@ export class PersonListService {
   decreasePaymentOf(person: Person) {
     const fraction = person.payment % this.adjustmentUnit;
 
-    if(fraction === 0) {
+    if (fraction === 0) {
       person.adjustPaymentBy(-this.adjustmentUnit);
     } else {
       person.adjustPaymentBy(-fraction);
@@ -62,27 +62,26 @@ export class PersonListService {
   }
 
   recalc() {
-    if(!this.totalPay) {
+    if (!this.totalPay) {
       return;
     }
 
     // calculate the sum of payments marked 'Fix'
-    const countOfFixed = this.personList
-      .filter(person => person.fixed === true)
+    const countOfFixed = this.personList.filter(person => person.fixed === true)
       .length;
 
     const totalOfFixed = this.personList
       .filter(person => person.fixed === true)
       .map(person => person.payment)
-      .reduce((prev, next) => { return prev + next }, 0);
+      .reduce((prev, next) => {
+        return prev + next;
+      }, 0);
 
     // calculate payment for each person other than 'Fix'ed person
-    const paymentPerPerson = (this.totalPay - totalOfFixed) / (this.personList.length - countOfFixed);
-    this.personList
-      .filter(person => person.fixed === false)
-      .forEach((person) => {
-        person.payment = Math.floor(paymentPerPerson);
-      })
-
+    const paymentPerPerson =
+      (this.totalPay - totalOfFixed) / (this.personList.length - countOfFixed);
+    this.personList.filter(person => person.fixed === false).forEach(person => {
+      person.payment = Math.floor(paymentPerPerson);
+    });
   }
 }
