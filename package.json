@@ -11,7 +11,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "deploy": "ng build -prod && firebase deploy",
-    "deploy-for-ci": "ng build -prod && firebase use default --token $FIREBASE_TOKEN && firebase deploy --token $FIREBASE_TOKEN"
+    "deploy-for-ci": "ng build -prod && firebase use default --token $FIREBASE_TOKEN && firebase deploy --token $FIREBASE_TOKEN",
+    "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,scss,css}\""
   },
   "private": true,
   "dependencies": {
