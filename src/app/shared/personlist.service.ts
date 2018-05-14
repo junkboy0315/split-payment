@@ -10,6 +10,7 @@ export class PersonListService {
   }
 
   set totalPay(val) {
+    if (!val) return;
     this._totalPay = val;
 
     // Determine the unit of adjustment when increasing or decreasing payment.
