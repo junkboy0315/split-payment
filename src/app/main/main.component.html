@@ -2,14 +2,8 @@
 <div class="d-flex justify-content-center container-of-total-payment">
   <div class="input-group">
     <span class="input-group-addon dollar">$</span>
-    <input
-      class="form-control"
-      aria-label="total payment"
-      placeholder="Total"
-      type="number"
-      (click)="$event.target.select()"
-      [(ngModel)]="personListService.totalPay"
-    >
+    <input class="form-control" aria-label="total payment" placeholder="Total" type="number" (click)="$event.target.select()"
+      [(ngModel)]="personListService.totalPay">
   </div>
   <button (click)="addPerson()" class="btn btn-default btn-primary">Add Person</button>
 </div>
@@ -17,10 +11,7 @@
 <div [@onPersonListChange]="personListService.personList.length">
 
   <!-- Person Badge -->
-  <div
-    class="d-flex justify-content-center container-of-total-person-badge"
-    *ngIf="personListService.personList.length !== 0"
-  >
+  <div class="d-flex justify-content-center container-of-total-person-badge" *ngIf="personListService.personList.length !== 0">
     <div>
       <span id="total-person-count" class="badge badge-pill badge-primary">{{personListService.personList.length}}</span>
       Persons
@@ -28,10 +19,7 @@
   </div>
 
   <!-- Person List -->
-  <div
-    class="d-flex justify-content-center container-of-person-list"
-    *ngIf="personListService.personList.length !== 0"
-  >
+  <div class="d-flex justify-content-center container-of-person-list" *ngIf="personListService.personList.length !== 0">
     <ul class="list-group">
       <li class="list-group-item" *ngFor="let person of personListService.personList; let i = index">
         <app-person [person]="person" [index]="i+1"></app-person>

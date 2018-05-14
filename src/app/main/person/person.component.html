@@ -1,10 +1,7 @@
 <div class="d-flex align-items-center">
 
   <!-- badge -->
-  <div
-    class="container-of-person-badge"
-    (click)="deletePerson(person)"
-  >
+  <div class="container-of-person-badge" (click)="deletePerson(person)">
     <div class="d-flex flex-column align-items-center">
       <span class="oi oi-person" title="person" aria-hidden="true"></span>
       <span class="badge badge-pill badge-secondary align-top">{{index}}</span>
@@ -14,22 +11,17 @@
   <!-- input group -->
   <div class="input-group">
 
-    <span
-      class="input-group-addon dollar"
-      [ngClass]="{'bg-danger': person.fixed, 'text-light': person.fixed}"
-      (click)="toggleFixedPaymentOf(person)"
-    >$</span>
+    <span class="input-group-addon dollar" [ngClass]="{'bg-danger': person.fixed, 'text-light': person.fixed}" (click)="toggleFixedPaymentOf(person)">$</span>
 
-    <input
-      type="number"
-      [(ngModel)]="person.payment"
-      (ngModelChange)="onEditPaymentOf(person)"
-      (click)="$event.target.select()"
-      placeholder="Payment"
-      class="form-control">
+    <input type="number" [(ngModel)]="person.payment" (ngModelChange)="onEditPaymentOf(person)" (click)="$event.target.select()"
+      placeholder="Payment" class="form-control">
 
-    <span class="btn-1 input-group-addon" (click)="increasePaymentOf(person)"><span class="oi oi-plus" title="x" aria-hidden="true"></span></span>
-    <span class="btn-2 input-group-addon" (click)="decreasePaymentOf(person)"><span class="oi oi-minus" title="x" aria-hidden="true"></span></span>
+    <span class="btn-1 input-group-addon" (click)="increasePaymentOf(person)">
+      <span class="oi oi-plus" title="x" aria-hidden="true"></span>
+    </span>
+    <span class="btn-2 input-group-addon" (click)="decreasePaymentOf(person)">
+      <span class="oi oi-minus" title="x" aria-hidden="true"></span>
+    </span>
 
   </div>
 

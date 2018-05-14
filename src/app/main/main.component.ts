@@ -1,17 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {
-  animate,
-  group,
-  keyframes,
-  query,
-  stagger,
-  state,
-  style,
-  transition,
-  trigger,
-} from '@angular/animations';
-
-import { Person } from '../shared/person.model';
+import { animate, group, keyframes, query, style, transition, trigger } from '@angular/animations';
+import { Component } from '@angular/core';
 import { PersonListService } from '../shared/personlist.service';
 
 @Component({

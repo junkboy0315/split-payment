@@ -1,5 +1,5 @@
-import { PersonListService } from './personlist.service';
 import { Person } from './person.model';
+import { PersonListService } from './personlist.service';
 
 describe('PersonListService', () => {
   let personListService;
