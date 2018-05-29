@@ -5,13 +5,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "test-for-ci": "ng test --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod && firebase deploy",
-    "deploy-for-ci": "ng build --prod && firebase use default --token $FIREBASE_TOKEN && firebase deploy --token $FIREBASE_TOKEN",
     "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,scss,css}\""
   },
   "private": true,
@@ -29,7 +27,6 @@
     "@angular/service-worker": "6.0.1",
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.4.1",
-    "firebase-tools": "^3.13.1",
     "raven-js": "^3.25.1",
     "rxjs": "^6.1.0",
     "web-animations-js": "^2.3.1",
