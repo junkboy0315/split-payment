@@ -5,7 +5,6 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "prebuild": "yarn test-for-ci && yarn e2e",
     "build": "ng build --prod",
     "test": "ng test",
     "test-for-ci": "ng test --watch=false",
