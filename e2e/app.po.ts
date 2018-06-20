@@ -203,4 +203,29 @@ export class AppPage {
         .then(() => true)
     );
   }
+
+  async canResetEverything() {
+    // test helper to check if the calculated value is the same as the expected value
+    const isValueResultSameWith = async (expectedValues: number[]) => {
+      const calculatedValues: any = await $$(
+        'li.list-group-item input',
+      ).getAttribute('value');
+
+      expect(calculatedValues.toString()).toBe(
+        expectedValues ? expectedValues.toString() : '',
+      );
+    };
+
+    await $('input').sendKeys('15000');
+    expect($('input[placeholder="Total"]').getAttribute('value')).toBe('15000');
+
+    await $('button').click();
+    await $('button').click();
+    await $('button').click();
+    await isValueResultSameWith([5000, 5000, 5000]);
+
+    await $('.navbar-brand').click();
+    await browser.sleep(500); // wait for animation
+    await isValueResultSameWith(null);
+  }
 }

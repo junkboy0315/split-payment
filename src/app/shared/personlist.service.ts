@@ -85,4 +85,9 @@ export class PersonListService {
       person.payment = Math.floor(paymentPerPerson);
     });
   }
+
+  reset() {
+    this.personList = [];
+    this._totalPay = null;
+  }
 }

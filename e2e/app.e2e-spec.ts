@@ -26,4 +26,9 @@ describe('SplitBills App', () => {
     page.navigateTo();
     page.canFixCorrectly();
   });
+
+  it('reset values', () => {
+    page.navigateTo();
+    page.canResetEverything();
+  });
 });

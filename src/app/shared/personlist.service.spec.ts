@@ -139,4 +139,15 @@ describe('PersonListService', () => {
     expect(personListService.personList[1].payment).toBe(2500);
     expect(personListService.personList[2].payment).toBe(2500);
   });
+
+  it('should reset everything', () => {
+    personListService.totalPay = 10000;
+    personListService.addPerson();
+    personListService.addPerson();
+    personListService.addPerson();
+    personListService.reset();
+
+    expect(personListService.personList.length).toBe(0);
+    expect(personListService.totalPay).toBe(null);
+  });
 });
